@@ -11,7 +11,8 @@ async function query(queryObject) {
     
   }
 
-  console.log('Credenciais do Postgres: ', clientData);
+  // Apenas para visualização
+  //console.log('Credenciais do Postgres: ', clientData);
 
   const client = new Client(clientData);
 
@@ -36,7 +37,7 @@ function getSSLValue() {
     };
   }
   
-  return process.env.NODE_ENV === "development" ? false : true
+  return process.env.NODE_ENV === "production" ? true : false
 }
 
 export default {
